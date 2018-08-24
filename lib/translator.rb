@@ -10,6 +10,7 @@ def load_library(file)
     new_hash[:get_meaning][array[0]] = hash
     new_hash[:get_emoticon][array[1]] = array[0]
   end
+  new_hash
 end
 
 def get_japanese_emoticon(file, emoticon)
