@@ -29,9 +29,9 @@ end
 def get_english_meaning(file, emoticon)
   # code goes here
   list = load_library(file)
-  list.each do |hash, array|
-    if array.include?(emoticon)
-      return array[emoticon]
+  list["get_meaning"].each do |emote, meaning|
+    if emote == emoticon
+      return meaning
     end
   end
   return "Sorry, that emoticon was not found"
