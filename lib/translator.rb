@@ -29,6 +29,7 @@ end
 def get_english_meaning(file, emoticon)
   # code goes here
   list = load_library(file)
+  puts list
   list["get_meaning"].each do |emote, meaning|
     if emote == emoticon
       return meaning
