@@ -21,8 +21,7 @@ def get_english_meaning(file, emoticon)
   list.each do |hash, array|
     if array.include?(emoticon)
       return hash
-    else
-      return "Sorry, that emoticon was not found"
     end
   end
+  "Sorry, that emoticon was not found"
 end
