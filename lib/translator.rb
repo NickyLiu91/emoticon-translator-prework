@@ -20,7 +20,7 @@ def get_english_meaning(file, emoticon)
   list = load_library(file)
   list.each do |hash, array|
     if array.include?(emoticon)
-      return array[0]
+      return hash
     end
   end
 end
