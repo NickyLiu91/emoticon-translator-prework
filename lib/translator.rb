@@ -8,8 +8,8 @@ def load_library(file)
 
   list = YAML.load_file(file)
   list.each do |hash, array|
-    new_hash["get_meaning"][array[0]] = hash
-    new_hash["get_emoticon"][array[1]] = array[0]
+    new_hash["get_meaning"][array[1]] = hash
+    new_hash["get_emoticon"][array[0]] = array[1]
   end
 
   return new_hash
