@@ -17,4 +17,10 @@ end
 
 def get_english_meaning(file, emoticon)
   # code goes here
+  list = load_library(file)
+  list.each do |hash, array|
+    if array.include?(emoticon)
+      return array[0]
+    end
+  end
 end
