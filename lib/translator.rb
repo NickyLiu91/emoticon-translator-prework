@@ -18,9 +18,9 @@ end
 def get_japanese_emoticon(file, emoticon)
   # code goes here
   list = load_library(file)
-  list.each do |hash, array|
-    if array.include?(emoticon)
-      return array[1]
+  list["get_emoticon"].each do |english_emote, jp_emote|
+    if english_emote == emoticon
+      return jp_emote
     end
   end
   return "Sorry, that emoticon was not found"
