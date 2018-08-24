@@ -11,8 +11,6 @@ def get_japanese_emoticon(file, emoticon)
   list.each do |hash, array|
     if array.include?(emoticon)
       return array[1]
-    else
-      return "Sorry, that emoticon was not found"
     end
   end
 end
