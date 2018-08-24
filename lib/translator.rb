@@ -18,7 +18,6 @@ end
 def get_japanese_emoticon(file, emoticon)
   # code goes here
   list = load_library(file)
-  puts list
   list.each do |hash, array|
     if array.include?(emoticon)
       return array[1]
@@ -32,7 +31,7 @@ def get_english_meaning(file, emoticon)
   list = load_library(file)
   list.each do |hash, array|
     if array.include?(emoticon)
-      return hash
+      return array[emoticon]
     end
   end
   return "Sorry, that emoticon was not found"
