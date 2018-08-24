@@ -5,11 +5,13 @@ def load_library(file)
   new_hash = {}
   new_hash["get_meaning"] = {}
   new_hash["get_emoticon"] = {}
+  return new_hash
   list = YAML.load_file(file)
   # list.each do |hash, array|
   #   new_hash["get_meaning"][array[0]] = hash
   #   new_hash["get_emoticon"][array[1]] = array[0]
   # end
+
 end
 
 def get_japanese_emoticon(file, emoticon)
